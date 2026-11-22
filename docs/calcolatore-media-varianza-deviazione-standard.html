@@ -1,0 +1,57 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Calcolatore media, mediana, varianza e deviazione standard (gratis)</title><meta name="description" content="Inserisci i dati e calcola media, mediana, moda, varianza e deviazione standard (della popolazione e campionaria), quartili e coefficiente di variazione.">
+<link rel="canonical" href="https://filippozita.github.io/esercizi-svolti/calcolatore-media-varianza-deviazione-standard.html">
+<meta property="og:title" content="Calcolatore media, mediana, varianza e deviazione standard (gratis)"><meta property="og:description" content="Inserisci i dati e calcola media, mediana, moda, varianza e deviazione standard (della popolazione e campionaria), quartili e coefficiente di variazione.">
+<style>
+
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10.5pt; color: #1d1d1d; line-height: 1.45; }
+h1 { color: #1F6F5C; font-size: 22pt; margin: 0 0 4px; }
+.sub { color: #555; font-size: 11pt; margin-bottom: 14px; }
+h2 { color: #1F6F5C; font-size: 14pt; border-bottom: 2px solid #1F6F5C; padding-bottom: 3px; margin-top: 22px; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 14px 0 4px; color: #123F35; page-break-after: avoid; }
+.box { background: #E8F3EF; border-left: 4px solid #1F6F5C; padding: 8px 12px; margin: 8px 0; page-break-inside: avoid; }
+.f { font-family: 'Cambria Math', Cambria, serif; font-size: 12pt; }
+table { border-collapse: collapse; width: 100%; margin: 6px 0 10px; font-size: 9.5pt; page-break-inside: avoid; }
+th { background: #1F6F5C; color: #fff; padding: 4px 6px; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+td { border: 1px solid #C9D6D1; padding: 3px 6px; text-align: right; }
+tr:nth-child(even) td { background: #F5FAF8; }
+.ex { border: 1px solid #C9D6D1; border-radius: 6px; padding: 8px 12px; margin: 10px 0; page-break-inside: avoid; }
+.ex b.t { color: #1F6F5C; }
+.sol { margin-top: 4px; }
+.res { font-weight: 700; color: #123F35; }
+.note { color: #666; font-size: 9pt; }
+.cover { text-align: center; margin-top: 60px; }
+.cover .big { font-size: 30pt; color: #1F6F5C; font-weight: 700; }
+.toc li { margin: 2px 0; }
+.pb {  }
+
+body{max-width:820px;margin:0 auto;padding:16px;background:#fff}
+header.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #C9D6D1;padding-bottom:8px;margin-bottom:16px}
+header.top a{color:#1F6F5C;text-decoration:none;font-weight:700}
+.cta{background:#123F35;color:#fff;border-radius:8px;padding:16px 18px;margin:22px 0}
+.cta a.btn{display:inline-block;background:#7FD1B3;color:#123F35;font-weight:700;padding:9px 16px;border-radius:6px;text-decoration:none;margin-top:8px}
+.cta p{margin:4px 0}
+.lock{border:2px dashed #C9D6D1;border-radius:8px;padding:14px;color:#555;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{border:1px solid #C9D6D1;border-radius:8px;padding:14px}
+.card a{color:#1F6F5C;font-weight:700}
+table{display:block;overflow-x:auto}
+footer{color:#777;font-size:9pt;margin-top:30px;border-top:1px solid #eee;padding-top:8px}
+</style><script type="application/ld+json">{"@context": "https://schema.org", "@type": "WebApplication", "name": "Calcolatore media, mediana, varianza e deviazione standard (gratis)", "description": "Inserisci i dati e calcola media, mediana, moda, varianza e deviazione standard (della popolazione e campionaria), quartili e coefficiente di variazione.", "url": "https://filippozita.github.io/esercizi-svolti/calcolatore-media-varianza-deviazione-standard.html", "inLanguage": "it", "isAccessibleForFree": true, "applicationCategory": "EducationalApplication", "operatingSystem": "Any", "offers": {"@type": "Offer", "price": "0", "priceCurrency": "EUR"}}</script></head><body>
+<header class="top"><a href="./">Esercizi svolti gratis</a><a href="https://payhip.com/b/BkzUb">Tutte le dispense →</a></header>
+<h1>Calcolatore media, mediana, varianza e deviazione standard (gratis)</h1><p class='sub'>Inserisci i dati e calcola media, mediana, moda, varianza e deviazione standard (della popolazione e campionaria), quartili e coefficiente di variazione.</p><style>.calc label{display:block;margin:8px 0 2px;font-weight:600}.calc input,.calc select{width:100%;max-width:320px;padding:7px;border:1px solid #C9D6D1;border-radius:6px;font-size:11pt}.calc button{margin-top:12px;background:#1F6F5C;color:#fff;border:0;border-radius:6px;padding:9px 18px;font-size:11pt;cursor:pointer}.out{margin-top:14px}</style><div class='calc'><label>Dati (separati da spazio o punto e virgola)</label><input id="d" value="18; 24; 30; 27; 28; 30; 22; 25; 30; 26" style="max-width:100%"><br><button onclick='calcola()'>Calcola</button></div><div class='out' id='out'></div><script>const f=(x,d=2)=>Number(x).toLocaleString('it-IT',{minimumFractionDigits:d,maximumFractionDigits:d});const v=id=>parseFloat(document.getElementById(id).value.replace(',','.'));const out=document.getElementById('out');function calcola(){const x=document.getElementById('d').value.split(/[;\s]+/).map(s=>parseFloat(s.replace(',','.'))).filter(n=>!isNaN(n)).sort((a,b)=>a-b);const n=x.length;
+if(n<2){out.innerHTML='<p>Inserisci almeno 2 numeri.</p>';return;}
+const m=x.reduce((a,b)=>a+b,0)/n,ss=x.reduce((a,b)=>a+(b-m)**2,0),q=p=>{const h=(n-1)*p,l=Math.floor(h);return x[l]+(h-l)*((x[l+1]??x[l])-x[l]);};
+const cnt={};x.forEach(z=>cnt[z]=(cnt[z]||0)+1);const mx=Math.max(...Object.values(cnt));const moda=mx>1?Object.keys(cnt).filter(k=>cnt[k]===mx).map(Number).map(z=>f(z,2)).join(' · '):'nessuna';
+out.innerHTML=`<table><tr><th>Indice</th><th>Valore</th></tr><tr><td>n</td><td>${n}</td></tr><tr><td>Media</td><td><b>${f(m,4)}</b></td></tr><tr><td>Mediana</td><td>${f(q(.5),4)}</td></tr><tr><td>Moda</td><td>${moda}</td></tr>
+<tr><td>Varianza popolazione (÷n)</td><td>${f(ss/n,4)}</td></tr><tr><td>Deviazione standard popolazione</td><td><b>${f(Math.sqrt(ss/n),4)}</b></td></tr>
+<tr><td>Varianza campionaria (÷n−1)</td><td>${f(ss/(n-1),4)}</td></tr><tr><td>Deviazione standard campionaria</td><td><b>${f(Math.sqrt(ss/(n-1)),4)}</b></td></tr>
+<tr><td>Q1 · Q3 (come QUARTILE.INC di Excel)</td><td>${f(q(.25),4)} · ${f(q(.75),4)}</td></tr><tr><td>Scarto interquartile</td><td>${f(q(.75)-q(.25),4)}</td></tr><tr><td>Coefficiente di variazione</td><td>${f(Math.sqrt(ss/n)/m*100,2)}%</td></tr></table>`;}calcola();</script><h2>Formule</h2><div class="box">Media: <span class="f">x̄ = Σx / n</span><br>Varianza della popolazione: <span class="f">σ² = Σ(x − x̄)² / n</span><br>Varianza campionaria: <span class="f">s² = Σ(x − x̄)² / (n − 1)</span><br>Deviazione standard = radice quadrata della varianza.</div>
+<p>All'esame controlla quale varianza chiede il tuo corso: alcuni testi usano n, altri n − 1.</p><div class="cta"><p><b>Ti sono stati utili?</b> La dispensa completa in PDF ha tutti i 9 esercizi svolti
+(qui ne vedi 3), pronta da stampare.</p>
+<a class="btn" href="https://payhip.com/b/ix1aB">Scarica la dispensa completa – 3,50 €</a>
+<p style="font-size:9.5pt;margin-top:8px">Oppure il <a href="https://payhip.com/b/BkzUb" style="color:#7FD1B3">pacchetto con 4 dispense a 9,90 €</a>.</p></div><p><a href='./'>Altri esercizi svolti e strumenti gratis →</a></p>
+<footer>Materiale originale, risultati calcolati e verificati. Controlla sempre il programma e le convenzioni del tuo corso.</footer>
+</body></html>
