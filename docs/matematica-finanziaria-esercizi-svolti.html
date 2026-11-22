@@ -1,0 +1,80 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Matematica finanziaria: formulario ed esercizi svolti</title><meta name="description" content="Interesse semplice e composto, tassi equivalenti, rendite, ammortamento francese e italiano, VAN e TIR: formule ed esercizi svolti gratis.">
+<link rel="canonical" href="https://filippozita.github.io/esercizi-svolti/matematica-finanziaria-esercizi-svolti.html">
+<meta property="og:title" content="Matematica finanziaria: formulario ed esercizi svolti"><meta property="og:description" content="Interesse semplice e composto, tassi equivalenti, rendite, ammortamento francese e italiano, VAN e TIR: formule ed esercizi svolti gratis.">
+<style>
+
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10.5pt; color: #1d1d1d; line-height: 1.45; }
+h1 { color: #1F6F5C; font-size: 22pt; margin: 0 0 4px; }
+.sub { color: #555; font-size: 11pt; margin-bottom: 14px; }
+h2 { color: #1F6F5C; font-size: 14pt; border-bottom: 2px solid #1F6F5C; padding-bottom: 3px; margin-top: 22px; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 14px 0 4px; color: #123F35; page-break-after: avoid; }
+.box { background: #E8F3EF; border-left: 4px solid #1F6F5C; padding: 8px 12px; margin: 8px 0; page-break-inside: avoid; }
+.f { font-family: 'Cambria Math', Cambria, serif; font-size: 12pt; }
+table { border-collapse: collapse; width: 100%; margin: 6px 0 10px; font-size: 9.5pt; page-break-inside: avoid; }
+th { background: #1F6F5C; color: #fff; padding: 4px 6px; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+td { border: 1px solid #C9D6D1; padding: 3px 6px; text-align: right; }
+tr:nth-child(even) td { background: #F5FAF8; }
+.ex { border: 1px solid #C9D6D1; border-radius: 6px; padding: 8px 12px; margin: 10px 0; page-break-inside: avoid; }
+.ex b.t { color: #1F6F5C; }
+.sol { margin-top: 4px; }
+.res { font-weight: 700; color: #123F35; }
+.note { color: #666; font-size: 9pt; }
+.cover { text-align: center; margin-top: 60px; }
+.cover .big { font-size: 30pt; color: #1F6F5C; font-weight: 700; }
+.toc li { margin: 2px 0; }
+.pb {  }
+
+body{max-width:820px;margin:0 auto;padding:16px;background:#fff}
+header.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #C9D6D1;padding-bottom:8px;margin-bottom:16px}
+header.top a{color:#1F6F5C;text-decoration:none;font-weight:700}
+.cta{background:#123F35;color:#fff;border-radius:8px;padding:16px 18px;margin:22px 0}
+.cta a.btn{display:inline-block;background:#7FD1B3;color:#123F35;font-weight:700;padding:9px 16px;border-radius:6px;text-decoration:none;margin-top:8px}
+.cta p{margin:4px 0}
+.lock{border:2px dashed #C9D6D1;border-radius:8px;padding:14px;color:#555;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{border:1px solid #C9D6D1;border-radius:8px;padding:14px}
+.card a{color:#1F6F5C;font-weight:700}
+table{display:block;overflow-x:auto}
+footer{color:#777;font-size:9pt;margin-top:30px;border-top:1px solid #eee;padding-top:8px}
+</style></head><body>
+<header class="top"><a href="./">Esercizi svolti gratis</a><a href="https://payhip.com/b/BkzUb">Tutte le dispense →</a></header>
+<h1>Matematica finanziaria: formulario ed esercizi svolti</h1><p class='sub'>Interesse semplice e composto, tassi equivalenti, rendite, ammortamento francese e italiano, VAN e TIR: formule ed esercizi svolti gratis.</p><div class="cta"><p><b>Ti sono stati utili?</b> La dispensa completa in PDF ha tutti i 11 esercizi svolti
+(qui ne vedi 3), pronta da stampare.</p>
+<a class="btn" href="https://payhip.com/b/WMrnJ">Scarica la dispensa completa – 3,90 €</a>
+<p style="font-size:9.5pt;margin-top:8px">Oppure il <a href="https://payhip.com/b/BkzUb" style="color:#7FD1B3">pacchetto con 4 dispense a 9,90 €</a>.</p></div>
+
+
+<h2>1. Capitalizzazione semplice e composta</h2>
+<div class="box"><b>Semplice</b>: <span class="f">I = C · i · t    M = C (1 + i t)</span><br/>
+<b>Composta</b>: <span class="f">M = C (1 + i)<sup>t</sup>    C = M (1 + i)<sup>−t</sup></span><br/>
+<b>Tempo</b>: <span class="f">t = ln(M/C) / ln(1+i)</span>   <b>Tasso</b>: <span class="f">i = (M/C)<sup>1/t</sup> − 1</span></div>
+<p>Nella semplice gli interessi non producono interessi (crescita lineare); nella composta sì (crescita esponenziale). Per durate inferiori all'anno la semplice dà un montante maggiore, oltre l'anno la composta.</p>
+<h2>2. Tassi equivalenti e nominali</h2>
+<div class="box"><span class="f">(1 + i) = (1 + i<sub>k</sub>)<sup>k</sup></span> → <span class="f">i<sub>k</sub> = (1+i)<sup>1/k</sup> − 1</span><br/>
+Tasso nominale convertibile k volte: <span class="f">j<sub>k</sub> = k · i<sub>k</sub></span>   (k = 2 semestrale, 4 trimestrale, 12 mensile)<br/>
+Regime semplice: tassi proporzionali <span class="f">i<sub>k</sub> = i / k</span></div>
+<h2>3. Sconto e valore attuale</h2>
+<div class="box"><b>Commerciale</b>: <span class="f">D = M d t   A = M (1 − d t)</span><br/>
+<b>Razionale</b>: <span class="f">A = M / (1 + i t)</span><br/><b>Composto</b>: <span class="f">A = M (1 + i)<sup>−t</sup></span></div>
+<h2>4. Rendite</h2>
+<div class="box"><b>Posticipata</b>: <span class="f">VA = R · a<sub>n¬i</sub> = R · [1 − (1+i)<sup>−n</sup>] / i</span><br/>
+<b>Montante</b>: <span class="f">M = R · s<sub>n¬i</sub> = R · [(1+i)<sup>n</sup> − 1] / i</span><br/>
+<b>Anticipata</b>: valori della posticipata × <span class="f">(1+i)</span><br/>
+<b>Perpetua posticipata</b>: <span class="f">VA = R / i</span>   <b>Differita di d periodi</b>: <span class="f">VA = R · a<sub>n¬i</sub> · (1+i)<sup>−d</sup></span></div>
+<h2>5. Ammortamenti</h2>
+<div class="box"><b>Francese</b> (rata costante): <span class="f">R = D / a<sub>n¬i</sub></span>; quota interessi <span class="f">= i · debito residuo</span>; quota capitale <span class="f">= R − quota interessi</span> (crescente).<br/>
+<b>Italiano</b> (quota capitale costante): <span class="f">C = D / n</span>; rata <span class="f">= C + i · debito residuo</span> (decrescente).</div>
+<h2>6. VAN e TIR</h2>
+<div class="box"><span class="f">VAN = Σ F<sub>t</sub> / (1+k)<sup>t</sup></span> (con F<sub>0</sub> negativo = investimento). Si accetta se VAN &gt; 0.<br/>
+TIR = tasso che rende VAN = 0. Si accetta se TIR &gt; costo del capitale k.</div>
+<h2 class="pb">7. Esercizi svolti</h2>
+<div class="ex"><b class="t">Esercizio 1 — Interesse semplice</b><br/>Si investono 5.000,00 € al tasso annuo semplice del 3,00% per 9 mesi. Calcolare interesse e montante.<div class="sol"><b>Soluzione.</b> t = 9/12 = 0,75 anni. I = C·i·t = 5.000,00 · 0,03 · 0,75 = <span class="res">112,50 €</span>; M = C + I = <span class="res">5.112,50 €</span>.</div></div><div class="ex"><b class="t">Esercizio 2 — Montante in capitalizzazione composta</b><br/>Capitale di 10.000,00 € al tasso annuo composto del 4,00% per 5 anni. Montante?<div class="sol"><b>Soluzione.</b> M = C(1+i)<sup>n</sup> = 10.000,00 · 1,04<sup>5</sup> = 10.000,00 · 1,216653 = <span class="res">12.166,53 €</span>.</div></div><div class="ex"><b class="t">Esercizio 3 — Tassi equivalenti e tasso nominale</b><br/>Dato il tasso annuo effettivo 6,00%, trovare il tasso mensile equivalente e il tasso nominale annuo convertibile mensilmente j<sub>12</sub>.<div class="sol"><b>Soluzione.</b> i<sub>12</sub> = (1+i)<sup>1/12</sup> − 1 = 1,06<sup>1/12</sup> − 1 = <span class="res">0,4868%</span>; j<sub>12</sub> = 12 · i<sub>12</sub> = <span class="res">5,8411%</span> (minore del 6%: il nominale sottostima l'effettivo).</div></div><div class="lock">🔒 Altri 8 esercizi svolti sono nella dispensa completa.</div><div class="cta"><p><b>Ti sono stati utili?</b> La dispensa completa in PDF ha tutti i 11 esercizi svolti
+(qui ne vedi 3), pronta da stampare.</p>
+<a class="btn" href="https://payhip.com/b/WMrnJ">Scarica la dispensa completa – 3,90 €</a>
+<p style="font-size:9.5pt;margin-top:8px">Oppure il <a href="https://payhip.com/b/BkzUb" style="color:#7FD1B3">pacchetto con 4 dispense a 9,90 €</a>.</p></div>
+
+<footer>Materiale originale, risultati calcolati e verificati. Controlla sempre il programma e le convenzioni del tuo corso.</footer>
+</body></html>

@@ -1,0 +1,79 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Statistica di base: formulario ed esercizi svolti</title><meta name="description" content="Media, mediana, varianza, quartili, probabilità, binomiale, normale e regressione: formule ed esercizi svolti di statistica gratis.">
+<link rel="canonical" href="https://filippozita.github.io/esercizi-svolti/statistica-esercizi-svolti.html">
+<meta property="og:title" content="Statistica di base: formulario ed esercizi svolti"><meta property="og:description" content="Media, mediana, varianza, quartili, probabilità, binomiale, normale e regressione: formule ed esercizi svolti di statistica gratis.">
+<style>
+
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10.5pt; color: #1d1d1d; line-height: 1.45; }
+h1 { color: #1F6F5C; font-size: 22pt; margin: 0 0 4px; }
+.sub { color: #555; font-size: 11pt; margin-bottom: 14px; }
+h2 { color: #1F6F5C; font-size: 14pt; border-bottom: 2px solid #1F6F5C; padding-bottom: 3px; margin-top: 22px; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 14px 0 4px; color: #123F35; page-break-after: avoid; }
+.box { background: #E8F3EF; border-left: 4px solid #1F6F5C; padding: 8px 12px; margin: 8px 0; page-break-inside: avoid; }
+.f { font-family: 'Cambria Math', Cambria, serif; font-size: 12pt; }
+table { border-collapse: collapse; width: 100%; margin: 6px 0 10px; font-size: 9.5pt; page-break-inside: avoid; }
+th { background: #1F6F5C; color: #fff; padding: 4px 6px; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+td { border: 1px solid #C9D6D1; padding: 3px 6px; text-align: right; }
+tr:nth-child(even) td { background: #F5FAF8; }
+.ex { border: 1px solid #C9D6D1; border-radius: 6px; padding: 8px 12px; margin: 10px 0; page-break-inside: avoid; }
+.ex b.t { color: #1F6F5C; }
+.sol { margin-top: 4px; }
+.res { font-weight: 700; color: #123F35; }
+.note { color: #666; font-size: 9pt; }
+.cover { text-align: center; margin-top: 60px; }
+.cover .big { font-size: 30pt; color: #1F6F5C; font-weight: 700; }
+.toc li { margin: 2px 0; }
+.pb {  }
+
+body{max-width:820px;margin:0 auto;padding:16px;background:#fff}
+header.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #C9D6D1;padding-bottom:8px;margin-bottom:16px}
+header.top a{color:#1F6F5C;text-decoration:none;font-weight:700}
+.cta{background:#123F35;color:#fff;border-radius:8px;padding:16px 18px;margin:22px 0}
+.cta a.btn{display:inline-block;background:#7FD1B3;color:#123F35;font-weight:700;padding:9px 16px;border-radius:6px;text-decoration:none;margin-top:8px}
+.cta p{margin:4px 0}
+.lock{border:2px dashed #C9D6D1;border-radius:8px;padding:14px;color:#555;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{border:1px solid #C9D6D1;border-radius:8px;padding:14px}
+.card a{color:#1F6F5C;font-weight:700}
+table{display:block;overflow-x:auto}
+footer{color:#777;font-size:9pt;margin-top:30px;border-top:1px solid #eee;padding-top:8px}
+</style></head><body>
+<header class="top"><a href="./">Esercizi svolti gratis</a><a href="https://payhip.com/b/BkzUb">Tutte le dispense →</a></header>
+<h1>Statistica di base: formulario ed esercizi svolti</h1><p class='sub'>Media, mediana, varianza, quartili, probabilità, binomiale, normale e regressione: formule ed esercizi svolti di statistica gratis.</p><div class="cta"><p><b>Ti sono stati utili?</b> La dispensa completa in PDF ha tutti i 9 esercizi svolti
+(qui ne vedi 3), pronta da stampare.</p>
+<a class="btn" href="https://payhip.com/b/ix1aB">Scarica la dispensa completa – 3,50 €</a>
+<p style="font-size:9.5pt;margin-top:8px">Oppure il <a href="https://payhip.com/b/BkzUb" style="color:#7FD1B3">pacchetto con 4 dispense a 9,90 €</a>.</p></div>
+
+
+<h2>1. Indici di posizione</h2>
+<div class="box">Media <span class="f">x̄ = Σxᵢ / n</span>   Media ponderata <span class="f">Σxᵢfᵢ / Σfᵢ</span><br/>
+Mediana: valore centrale dei dati ordinati (n dispari: posizione (n+1)/2; n pari: media dei due centrali)<br/>Moda: valore più frequente</div>
+<h2>2. Indici di variabilità</h2>
+<div class="box">Varianza <span class="f">σ² = Σ(xᵢ − x̄)² / n</span>   campionaria <span class="f">s² = Σ(xᵢ − x̄)² / (n − 1)</span><br/>
+Formula di calcolo: <span class="f">σ² = Σxᵢ²/n − x̄²</span>   Scarto quadratico medio <span class="f">σ = √σ²</span><br/>
+Coefficiente di variazione <span class="f">CV = σ / x̄</span>   Campo di variazione <span class="f">max − min</span>   IQR <span class="f">Q3 − Q1</span></div>
+<h2>3. Distribuzioni di frequenza</h2>
+<div class="box">Frequenza relativa <span class="f">fᵢ / N</span>; cumulata = somma progressiva. Con classi si usa il valore centrale.</div>
+<h2>4. Probabilità</h2>
+<div class="box"><span class="f">P(A) = casi favorevoli / casi possibili</span>   <span class="f">P(A∪B) = P(A) + P(B) − P(A∩B)</span><br/>
+Condizionata <span class="f">P(A|B) = P(A∩B) / P(B)</span>   Indipendenza <span class="f">P(A∩B) = P(A)·P(B)</span><br/>
+Bayes <span class="f">P(A|B) = P(B|A)·P(A) / P(B)</span></div>
+<h2>5. Binomiale e normale</h2>
+<div class="box">Binomiale <span class="f">P(X=k) = C(n,k) pᵏ (1−p)ⁿ⁻ᵏ</span>, <span class="f">μ = np</span>, <span class="f">σ² = np(1−p)</span><br/>
+Normale standardizzata <span class="f">z = (x − μ) / σ</span>; si usano le tavole di Φ(z). Regola empirica: 68% entro 1σ, 95% entro 2σ, 99,7% entro 3σ.</div>
+<h2>6. Regressione e correlazione</h2>
+<div class="box"><span class="f">b = Sxy / Sxx</span>, <span class="f">a = ȳ − b x̄</span>, retta <span class="f">ŷ = a + b x</span><br/>
+<span class="f">r = Sxy / √(Sxx · Syy)</span>, con −1 ≤ r ≤ 1; <span class="f">R² = r²</span> = quota di varianza spiegata.</div>
+<h2>7. Intervalli di confidenza</h2>
+<div class="box">Media con σ nota: <span class="f">x̄ ± z<sub>α/2</sub> · σ/√n</span> (z = 1,645 al 90%, 1,96 al 95%, 2,576 al 99%)<br/>
+Con σ ignota e n piccolo si usa la t di Student con n−1 gradi di libertà.</div>
+<h2 class="pb">8. Esercizi svolti</h2>
+<div class="ex"><b class="t">Esercizio 1 — Indici di posizione</b><br/>Voti di 10 esami: 18, 22, 25, 25, 27, 28, 30, 30, 30, 26. Calcolare media, mediana e moda.<div class="sol"><b>Soluzione.</b> Media = Σx/n = 261/10 = <span class="res">26,10</span>. Ordinati: 18, 22, 25, 25, 26, 27, 28, 30, 30, 30; n pari → mediana = media dei valori in 5ª e 6ª posizione = (26+27)/2 = <span class="res">26,50</span>. Moda = <span class="res">30</span> (compare 3 volte).</div></div><div class="ex"><b class="t">Esercizio 2 — Varianza e deviazione standard</b><br/>Con gli stessi dati calcolare varianza e scarto quadratico medio (della popolazione e campionari).<div class="sol"><b>Soluzione.</b> Σ(x−x̄)² = <span class="res">134,90</span>. Varianza popolazione σ² = 134,90/10 = <span class="res">13,49</span>, σ = <span class="res">3,673</span>. Campionaria s² = 134,90/9 = <span class="res">14,99</span>, s = <span class="res">3,872</span>. CV = σ/x̄ = <span class="res">14,1%</span>.</div></div><div class="ex"><b class="t">Esercizio 3 — Distribuzione per classi</b><br/>Età di 40 clienti raggruppate in classi (vedi tabella). Media e varianza.<div class="sol"><b>Soluzione.</b> <table><tr><th>Classe</th><th>Valore centrale</th><th>Freq. ass.</th><th>Freq. rel.</th><th>Freq. cumulata</th></tr><tr><td>0–10</td><td>5</td><td>4</td><td>0,100</td><td>4</td></tr><tr><td>10–20</td><td>15</td><td>10</td><td>0,250</td><td>14</td></tr><tr><td>20–30</td><td>25</td><td>16</td><td>0,400</td><td>30</td></tr><tr><td>30–40</td><td>35</td><td>7</td><td>0,175</td><td>37</td></tr><tr><td>40–50</td><td>45</td><td>3</td><td>0,075</td><td>40</td></tr></table>Media ponderata = Σ(c·f)/N = 950/40 = <span class="res">23,75</span>; varianza = Σf(c−x̄)²/N = <span class="res">110,94</span>, σ = <span class="res">10,53</span>.</div></div><div class="lock">🔒 Altri 6 esercizi svolti sono nella dispensa completa.</div><div class="cta"><p><b>Ti sono stati utili?</b> La dispensa completa in PDF ha tutti i 9 esercizi svolti
+(qui ne vedi 3), pronta da stampare.</p>
+<a class="btn" href="https://payhip.com/b/ix1aB">Scarica la dispensa completa – 3,50 €</a>
+<p style="font-size:9.5pt;margin-top:8px">Oppure il <a href="https://payhip.com/b/BkzUb" style="color:#7FD1B3">pacchetto con 4 dispense a 9,90 €</a>.</p></div>
+
+<footer>Materiale originale, risultati calcolati e verificati. Controlla sempre il programma e le convenzioni del tuo corso.</footer>
+</body></html>
