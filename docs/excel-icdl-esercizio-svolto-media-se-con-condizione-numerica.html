@@ -1,0 +1,57 @@
+<!doctype html><html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MEDIA.SE con condizione numerica: esercizio svolto di Excel / ICDL</title><meta name="description" content="Media delle vendite superiori a 1.000 €.">
+<link rel="canonical" href="https://filippozita.github.io/esercizi-svolti/excel-icdl-esercizio-svolto-media-se-con-condizione-numerica.html">
+<meta property="og:title" content="MEDIA.SE con condizione numerica: esercizio svolto di Excel / ICDL"><meta property="og:description" content="Media delle vendite superiori a 1.000 €.">
+<style>
+
+body { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10.5pt; color: #1d1d1d; line-height: 1.45; }
+h1 { color: #1F6F5C; font-size: 22pt; margin: 0 0 4px; }
+.sub { color: #555; font-size: 11pt; margin-bottom: 14px; }
+h2 { color: #1F6F5C; font-size: 14pt; border-bottom: 2px solid #1F6F5C; padding-bottom: 3px; margin-top: 22px; page-break-after: avoid; }
+h3 { font-size: 11.5pt; margin: 14px 0 4px; color: #123F35; page-break-after: avoid; }
+.box { background: #E8F3EF; border-left: 4px solid #1F6F5C; padding: 8px 12px; margin: 8px 0; page-break-inside: avoid; }
+.f { font-family: 'Cambria Math', Cambria, serif; font-size: 12pt; }
+table { border-collapse: collapse; width: 100%; margin: 6px 0 10px; font-size: 9.5pt; page-break-inside: avoid; }
+th { background: #1F6F5C; color: #fff; padding: 4px 6px; text-align: right; }
+th:first-child, td:first-child { text-align: left; }
+td { border: 1px solid #C9D6D1; padding: 3px 6px; text-align: right; }
+tr:nth-child(even) td { background: #F5FAF8; }
+.ex { border: 1px solid #C9D6D1; border-radius: 6px; padding: 8px 12px; margin: 10px 0; page-break-inside: avoid; }
+.ex b.t { color: #1F6F5C; }
+.sol { margin-top: 4px; }
+.res { font-weight: 700; color: #123F35; }
+.note { color: #666; font-size: 9pt; }
+.cover { text-align: center; margin-top: 60px; }
+.cover .big { font-size: 30pt; color: #1F6F5C; font-weight: 700; }
+.toc li { margin: 2px 0; }
+.pb {  }
+
+body{max-width:820px;margin:0 auto;padding:16px;background:#fff}
+header.top{display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #C9D6D1;padding-bottom:8px;margin-bottom:16px}
+header.top a{color:#1F6F5C;text-decoration:none;font-weight:700}
+.cta{background:#123F35;color:#fff;border-radius:8px;padding:16px 18px;margin:22px 0}
+.cta a.btn{display:inline-block;background:#7FD1B3;color:#123F35;font-weight:700;padding:9px 16px;border-radius:6px;text-decoration:none;margin-top:8px}
+.cta p{margin:4px 0}
+.lock{border:2px dashed #C9D6D1;border-radius:8px;padding:14px;color:#555;text-align:center}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.card{border:1px solid #C9D6D1;border-radius:8px;padding:14px}
+.card a{color:#1F6F5C;font-weight:700}
+table{display:block;overflow-x:auto}
+footer{color:#777;font-size:9pt;margin-top:30px;border-top:1px solid #eee;padding-top:8px}
+</style></head><body>
+<header class="top"><a href="./">Esercizi svolti gratis</a><a href="https://payhip.com/b/BkzUb">Tutte le dispense →</a></header>
+<p class='note'><a href='excel-esercizi-esame-informatica-icdl.html'>← Excel per l'esame di Informatica / ICDL: teoria ed esercizi svolti</a></p><h1>MEDIA.SE con condizione numerica: esercizio svolto di Excel / ICDL</h1><p>Tabella dati usata nell'esercizio:</p><table><tr><th>Funzione</th><th>Cosa fa</th><th>Esempio</th></tr>
+<tr><td>SOMMA, MEDIA, MAX, MIN</td><td>Statistiche base</td><td>=MEDIA(C2:C9)</td></tr>
+<tr><td>CONTA.NUMERI / CONTA.VALORI</td><td>Conta celle con numeri / non vuote</td><td>=CONTA.VALORI(A2:A9)</td></tr>
+<tr><td>CONTA.SE / SOMMA.SE / MEDIA.SE</td><td>Con una condizione</td><td>=SOMMA.SE(B2:B9;"Nord";C2:C9)</td></tr>
+<tr><td>SE, E, O</td><td>Logica e condizioni</td><td>=SE(E(C2&gt;1000;D2&lt;3);"Sì";"No")</td></tr>
+<tr><td>CERCA.VERT</td><td>Ricerca in tabella</td><td>=CERCA.VERT(x;A2:D9;3;FALSO)</td></tr>
+<tr><td>ARROTONDA</td><td>Arrotonda a n cifre</td><td>=ARROTONDA(A1;2)</td></tr>
+<tr><td>OGGI, ADESSO</td><td>Data/ora corrente</td><td>=OGGI()-B2 (giorni trascorsi)</td></tr>
+<tr><td>RANGO</td><td>Posizione in classifica</td><td>=RANGO(C2;$C$2:$C$9)</td></tr></table><div class='ex'><b class='t'>Testo</b><br>Media delle vendite superiori a 1.000 €.</div><div class='lock'>🔒 La soluzione passo passo di questo esercizio è nella dispensa completa.</div><div class="cta"><p><b>Ti sono stati utili?</b> La dispensa completa in PDF ha tutti i 12 esercizi svolti
+(qui ne vedi 3), pronta da stampare.</p>
+<a class="btn" href="https://payhip.com/b/vWD2U">Scarica la dispensa completa – 3,50 €</a>
+<p style="font-size:9.5pt;margin-top:8px">Oppure il <a href="https://payhip.com/b/BkzUb" style="color:#7FD1B3">pacchetto con 4 dispense a 9,90 €</a>.</p></div><p><a href='excel-esercizi-esame-informatica-icdl.html'>Teoria e altri esercizi svolti gratis di Excel / ICDL →</a></p>
+<footer>Materiale originale, risultati calcolati e verificati. Controlla sempre il programma e le convenzioni del tuo corso.</footer>
+</body></html>
