@@ -43,15 +43,16 @@ out.innerHTML=`<table><tr><th>Indice</th><th>Valore</th></tr><tr><td>n</td><td>$
          teoria="""<h2>Formule</h2><div class="box">Media: <span class="f">x̄ = Σx / n</span><br>Varianza della popolazione: <span class="f">σ² = Σ(x − x̄)² / n</span><br>Varianza campionaria: <span class="f">s² = Σ(x − x̄)² / (n − 1)</span><br>Deviazione standard = radice quadrata della varianza.</div>
 <p>All'esame controlla quale varianza chiede il tuo corso: alcuni testi usano n, altri n − 1.</p>"""),
     dict(slug="calcolo-iva-scorporo-22", link="https://payhip.com/b/ghBQW", prezzo="4,00 €", tot=10,
-         title="Calcolo IVA 22%: aggiungere e scorporare l'IVA (calcolatore gratis)",
-         desc="Aggiungi l'IVA a un imponibile o scorpora l'IVA da un prezzo ivato, con aliquote 22%, 10%, 5% e 4%. Formula e scrittura contabile in partita doppia.",
+         title="Come si scorpora l'IVA al 22%: formula e calcolatore gratis",
+         desc="Come si scorpora l'IVA al 22%: dividi il prezzo ivato per 1,22 (es. 1.220 € → 1.000 € + 220 € di IVA). Calcolatore gratis per scorporare o aggiungere l'IVA al 22%, 10%, 5% e 4%.",
          form="""<label>Importo (€)</label><input id="a" value="1220">
 <label>Aliquota</label><select id="r"><option>22</option><option>10</option><option>5</option><option>4</option></select>
 <label>L'importo è</label><select id="t"><option value="lordo">IVA inclusa (scorpora)</option><option value="netto">imponibile (aggiungi IVA)</option></select>""",
          js="""const a=v('a'),r=v('r')/100,lordo=document.getElementById('t').value==='lordo';const imp=lordo?a/(1+r):a,iva=imp*r,tot=imp+iva;
 out.innerHTML=`<div class="box">Imponibile: <b>${f(imp)} €</b> · IVA ${f(r*100,0)}%: <b class="res">${f(iva)} €</b> · Totale: <b>${f(tot)} €</b></div>
 <p>Scrittura di un acquisto di merci con fattura (partita doppia):</p><table><tr><th>Conto</th><th>DARE</th><th>AVERE</th></tr><tr><td>Merci c/acquisti</td><td>${f(imp)}</td><td></td></tr><tr><td>IVA ns/credito</td><td>${f(iva)}</td><td></td></tr><tr><td>Debiti v/fornitori</td><td></td><td>${f(tot)}</td></tr></table>`;""",
-         teoria="""<h2>Formule</h2><div class="box">Aggiungere l'IVA: <span class="f">totale = imponibile × (1 + aliquota)</span><br>Scorporare l'IVA: <span class="f">imponibile = totale / (1 + aliquota)</span>; IVA = totale − imponibile.<br>Esempio: 1.220 € con IVA 22% → imponibile 1.000 €, IVA 220 €.</div>"""),
+         teoria="""<h2>Come si scorpora l'IVA al 22%</h2><p>Per scorporare l'IVA al 22% da un prezzo IVA inclusa si divide il prezzo per <b>1,22</b>: il risultato è l'imponibile, e la differenza tra prezzo e imponibile è l'IVA. Esempio: 122 € / 1,22 = 100 € di imponibile e 22 € di IVA. Attenzione: non basta togliere il 22% dal prezzo (122 € − 22% = 95,16 €, sbagliato).</p>
+<h2>Formule</h2><div class="box">Aggiungere l'IVA: <span class="f">totale = imponibile × (1 + aliquota)</span><br>Scorporare l'IVA: <span class="f">imponibile = totale / (1 + aliquota)</span>; IVA = totale − imponibile.<br>Esempio: 1.220 € con IVA 22% → imponibile 1.000 €, IVA 220 €.</div>"""),
 ]
 
 for c in CALC:
