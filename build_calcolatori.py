@@ -19,15 +19,16 @@ out.innerHTML=`<div class="box">Tasso per periodo (equivalente): <b>${f(i*100,4)
          teoria="""<h2>Formula della rata</h2><div class="box"><span class="f">R = C · i / (1 − (1+i)<sup>−n</sup>)</span><br>C = capitale, i = tasso del periodo, n = numero di rate. Con rate mensili il tasso annuo si converte nel tasso mensile equivalente: i<sub>12</sub> = (1+i)<sup>1/12</sup> − 1.</div>
 <p>Nell'ammortamento francese la rata è costante: all'inizio è fatta soprattutto di interessi, verso la fine soprattutto di capitale. Nell'ammortamento italiano invece è costante la quota capitale.</p>"""),
     dict(slug="calcolo-interesse-composto-montante", link="https://payhip.com/b/WMrnJ", prezzo="3,90 €", tot=11,
-         title="Calcolo interesse composto e montante (calcolatore gratis con formula)",
-         desc="Calcola montante, interesse e valore attuale in capitalizzazione composta e semplice. Formula spiegata e confronto anno per anno.",
+         title="Formula degli interessi semplice e composta: calcolatore del montante gratis",
+         desc="Le formule degli interessi: semplice I = C·i·t, capitalizzazione composta M = C(1+i)^t. Calcola gratis montante, interesse e valore attuale, con confronto anno per anno.",
          form="""<label>Capitale iniziale (€)</label><input id="C" value="5000">
 <label>Tasso annuo (%)</label><input id="i" value="3">
 <label>Durata (anni)</label><input id="t" value="4">""",
          js="""const C=v('C'),i=v('i')/100,t=v('t');const Mc=C*Math.pow(1+i,t),Ms=C*(1+i*t);let rows='';
 for(let k=1;k<=Math.min(Math.ceil(t),40);k++)rows+=`<tr><td>${k}</td><td>${f(C*(1+i*k))}</td><td>${f(C*Math.pow(1+i,k))}</td></tr>`;
 out.innerHTML=`<div class="box">Montante composto: <b class="res">${f(Mc)} €</b> (interesse ${f(Mc-C)} €)<br>Montante semplice: <b>${f(Ms)} €</b> (interesse ${f(Ms-C)} €)<br>Tempo di raddoppio (composto): <b>${f(Math.log(2)/Math.log(1+i))} anni</b></div><table><tr><th>Anno</th><th>Semplice (€)</th><th>Composto (€)</th></tr>${rows}</table>`;""",
-         teoria="""<h2>Formule</h2><div class="box">Semplice: <span class="f">M = C(1 + i·t)</span><br>Composto: <span class="f">M = C(1 + i)<sup>t</sup></span><br>Valore attuale: <span class="f">C = M(1 + i)<sup>−t</sup></span><br>Raddoppio: <span class="f">t = ln 2 / ln(1+i)</span></div>"""),
+         teoria="""<h2>Formula degli interessi: semplice e composta</h2><p>In <b>capitalizzazione semplice</b> l'interesse si calcola sempre sul capitale iniziale: <b>I = C · i · t</b>. In <b>capitalizzazione composta</b> gli interessi di ogni anno si aggiungono al capitale e producono a loro volta interessi: il montante è <b>M = C · (1 + i)<sup>t</sup></b> e l'interesse è I = M − C. Esempio con C = 1.000 €, i = 5%, t = 3 anni: semplice I = 1.000 · 0,05 · 3 = 150 € (M = 1.150 €); composta M = 1.000 · 1,05<sup>3</sup> = 1.157,63 € (I = 157,63 €).</p>
+<h2>Formule</h2><div class="box">Semplice: <span class="f">M = C(1 + i·t)</span><br>Composto: <span class="f">M = C(1 + i)<sup>t</sup></span><br>Valore attuale: <span class="f">C = M(1 + i)<sup>−t</sup></span><br>Raddoppio: <span class="f">t = ln 2 / ln(1+i)</span></div>"""),
     dict(slug="calcolatore-media-varianza-deviazione-standard", link="https://payhip.com/b/ix1aB", prezzo="3,50 €", tot=9,
          title="Calcolatore media, mediana, varianza e deviazione standard (gratis)",
          desc="Inserisci i dati e calcola media, mediana, moda, varianza e deviazione standard (della popolazione e campionaria), quartili e coefficiente di variazione.",
